@@ -1,0 +1,138 @@
+html {
+	scroll-behavior: smooth;
+}
+@font-face {
+	font-family: "Delight";
+	src: url("../assets/fonts/Delight-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Delight";
+	src: url("../assets/fonts/Delight-Bold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Delight";
+	src: url("../assets/fonts/Delight-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Delight";
+	src: url("../assets/fonts/Delight-ExtraLight.ttf") format("truetype");
+}
+body {
+	background-color: black;
+}
+* {
+	color: white;
+}
+nav {
+	font-family: "Delight-ExtraBold", sans-serif;
+  z-index: 2;
+}
+.section {
+	height: 150svh;
+	display: flex;
+}
+
+.about {
+  padding: 2rem;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color: #1A1A1A;
+  margin-top: 100px;
+  border-radius: 8px;
+  border: 0.5px solid #717171;
+}
+
+.card {
+  transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 40vh;
+  border: 0.5px solid #717171;
+  border-radius: 8px;
+  background-color: #1A1A1A;
+  flex-direction: column;
+  font-family: "Delight-Regular", sans-serif;
+}
+
+.card:hover {
+  transform: scale(1.1);              /* Makes it bigger */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Optional glow */
+  border-color: white;               /* Brighter border to stand out */
+}
+
+.footer {
+  
+  height: 20svh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Delight-Regular", sans-serif;
+  gap: 5rem;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 23vh;
+  width: 20vh;
+  border: 0.5px solid #717171;
+  border-radius: 8px;
+  background-color: #1A1A1A;
+  flex-direction: column;
+  font-family: "Delight-Regular", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile img {
+  width: 27%;
+}
+
+.profile h2 {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 10px;
+  color: white;
+  font-size: 1rem;
+}
+
+.profile:hover h2 {
+  opacity: 1;
+}
+
+.profile:hover img {
+  transform: scale(1.20);
+}
+
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.section-words {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Delight-Regular", sans-serif;
+  width: 50%;
+  padding: 50px;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
