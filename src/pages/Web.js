@@ -43,16 +43,7 @@ const Web = () => {
 
 	return (
 		<section id="WebSection" className="section">
-			<div
-				style={{
-					position: "sticky",
-					top: "10rem",
-					zIndex: 10,
-					width: "50%",
-					height: "500px",
-					//border: "white 1px solid" //Comment out when not needed
-				}}
-			>
+			<div className="section-image">
 				<img
 					src={Computer}
 					alt="Sticky landscape"

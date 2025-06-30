@@ -12,7 +12,7 @@ const Home = () => {
 	return (
 		<div>
 			<Sidebar />
-			<div style={{ marginLeft: "250px" }}>
+			<div className="push-content-left">
                 <About />
 				<Web />
 				<Design />

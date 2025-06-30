@@ -9,18 +9,18 @@ const Packages = () => {
 				display: "flex",
 				justifyContent: "center",
 				alignItems: "center",
-				gap: "40px",
+				gap: "30px",
 			}}
 		>
 			<div className="card">
-				<h1
+				<h3
 					style={{
 						textDecoration: "underline",
-						fontSize: "3em"
+						fontSize: "2em"
 					}}
 				>
 					Tier I
-				</h1>
+				</h3>
 				<ul
 					style={{
 						listStyle: "none",
@@ -35,14 +35,14 @@ const Packages = () => {
 				</ul>
 			</div>
 			<div className="card">
-				<h1
+				<h3
 					style={{
 						textDecoration: "underline",
-						fontSize: "3em"
+						fontSize: "2em"
 					}}
 				>
 					Tier II
-				</h1>
+				</h3>
 				<ul
 					style={{
 						listStyle: "none",
@@ -57,14 +57,14 @@ const Packages = () => {
 				</ul>
 			</div>
 			<div className="card">
-				<h1
+				<h3
 					style={{
 						textDecoration: "underline",
-						fontSize: "3em"
+						fontSize: "2em"
 					}}
 				>
 					Tier III
-				</h1>
+				</h3>
 				<ul
 					style={{
 						listStyle: "none",

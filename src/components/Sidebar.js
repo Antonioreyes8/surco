@@ -29,8 +29,8 @@ const Sidebar = () => {
 	];
 
 	return (
-		<aside className="sidebar">
-			<img src={SurcoLogo} alt="Surco logo" style={{ width: "80%" }} />
+		<div className="sidebar">
+			<img src={SurcoLogo} alt="Surco logo"  className="sidebar-img" />
 
 			{/* Navigation list */}
 			<ul
@@ -58,7 +58,7 @@ const Sidebar = () => {
 					</li>
 				))}
 			</ul>
-		</aside>
+		</div>
 	);
 };
 
