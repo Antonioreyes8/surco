@@ -2,21 +2,12 @@ import React from "react";
 
 const Packages = () => {
 	return (
-		<div
-			style={{
-				//border: "solid white 1px", //only use to see border
-				height: "70svh",
-				display: "flex",
-				justifyContent: "center",
-				alignItems: "center",
-				gap: "30px",
-			}}
-		>
+		<div className="packages-section">
 			<div className="card">
 				<h3
 					style={{
 						textDecoration: "underline",
-						fontSize: "2em"
+						fontSize: "2em",
 					}}
 				>
 					Tier I
@@ -38,7 +29,7 @@ const Packages = () => {
 				<h3
 					style={{
 						textDecoration: "underline",
-						fontSize: "2em"
+						fontSize: "2em",
 					}}
 				>
 					Tier II
@@ -60,7 +51,7 @@ const Packages = () => {
 				<h3
 					style={{
 						textDecoration: "underline",
-						fontSize: "2em"
+						fontSize: "2em",
 					}}
 				>
 					Tier III

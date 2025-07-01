@@ -41,7 +41,7 @@ const Sidebar = () => {
 			>
 				{/* Loop through each section and create a link */}
 				{navigationItems.map((item) => (
-					<li key={item.id} style={{ marginBottom: "1rem" }}>
+					<li key={item.id} className="sidebar-words">
 						<a
 							href={`#${item.id}`}
 							style={{
