@@ -7,32 +7,32 @@ const Design = () => {
 		{
 			title: "Brand Identity & Logo Design",
 			description:
-				"Complete visual identity systems including logo design, color palettes, typography selection, and comprehensive brand guidelines for consistent messaging.",
+				"Logos, colors, typography, and brand guidelines for a consistent visual identity.",
 		},
 		{
 			title: "Social Media Design & Templates",
 			description:
-				"Coherent & Custom Instagram posts, story templates, Facebook covers, and LinkedIn graphics that maintain brand consistency across all social platforms.",
+				"Custom posts, stories, and graphics tailored for consistent branding across platforms.",
 		},
 		{
 			title: "Print Design & Marketing Materials",
 			description:
-				"Professional business cards, brochures, flyers, posters, and promotional materials designed to make a lasting impression on your audience.",
+				"Business cards, flyers, posters, and other print materials that leave an impression.",
 		},
 		{
 			title: "UI/UX Design & Prototyping",
 			description:
-				"User-centered interface design with wireframing, prototyping, and user experience optimization for websites and mobile applications.",
+				"User-focused web and app design with wireframes and interactive prototypes.",
 		},
 		{
 			title: "Packaging & Product Design",
 			description:
-				"Eye-catching product packaging, labels, and retail displays that stand out on shelves and communicate your brand values effectively.",
+				"Packaging, labels, and displays that grab attention and reflect your brand.",
 		},
 		{
 			title: "Presentation & Document Design",
 			description:
-				"Professional slide decks, reports, proposals, and corporate documents that communicate your message with visual impact and clarity.",
+				"Slide decks, reports, and proposals designed for clarity and visual impact.",
 		},
 	];
 	return (

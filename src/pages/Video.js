@@ -6,29 +6,33 @@ const Video = () => {
 	const webServices = [
 		{
 			title: "Promotional & Explainer Videos",
-			description: "Engaging company introductions, product demonstrations, service explanations, and brand storytelling videos that convert viewers into customers.",
+			description:
+				"Brand stories, product demos, and service overviews that turn viewers into customers.",
 		},
 		{
 			title: "Social Media Video Content",
 			description:
-				"Short-form videos, Instagram reels, TikTok content, and platform-optimized video content designed to increase engagement and reach.",
+				"Reels, TikToks, and short-form videos optimized for engagement and reach.",
 		},
 		{
 			title: "Corporate & Training Videos",
-			description: "Employee training materials, internal communications, corporate announcements, and educational content for businesses and organizations.",
+			description:
+				"Training, internal comms, and educational videos for teams and businesses.",
 		},
 		{
 			title: "Event Videography & Live Streaming",
 			description:
-				"Professional event coverage, live streaming services, conference recording, and real-time social media content creation.",
+				"Live streams, event coverage, and on-the-spot content for social media.",
 		},
 		{
 			title: "Motion Graphics & Animation",
-			description: "Animated logos, kinetic typography, explainer animations, and dynamic infographics that bring your brand to life with movement",
+			description:
+				"Animated logos, typography, and infographics that bring your brand to life.",
 		},
 		{
 			title: "Video Editing & Post-Production",
-			description: "Complete post-production services including color grading, sound design, visual effects, and multi-camera editing for all video formats.",
+			description:
+				"Color grading, sound design, VFX, and edits for all types of video content.",
 		},
 	];
 

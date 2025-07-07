@@ -6,31 +6,34 @@ const Prints = () => {
 	const webServices = [
 		{
 			title: "Marketing Materials & Collateral",
-			description: "Professional brochures, flyers, business cards, letterheads, and promotional materials that represent your brand with quality and consistency.",
+			description:
+				"Brochures, flyers, business cards, and letterheads that reflect your brand clearly.",
 		},
 		{
 			title: "Large Format & Trade Show Graphics",
 			description:
-				"Eye-catching banners, posters, trade show displays, and exhibition graphics designed to attract attention and drive foot traffic.",
+				"Banners, posters, and displays designed to draw attention at events and exhibits.",
 		},
 		{
 			title: "Custom Merchandise & Promotional Items",
-			description: "Branded apparel, promotional products, corporate gifts, and custom merchandise that keeps your brand top-of-mind with customers.",
+			description:
+				"Branded apparel, gifts, and merch that keep your brand top-of-mind.",
 		},
 		{
 			title: "Signage & Environmental Graphics",
 			description:
-				"Indoor and outdoor signage, wayfinding systems, window graphics, and environmental branding that enhances your physical space.",
+				"Indoor/outdoor signage, wayfinding, and graphics that enhance physical spaces.",
 		},
 		{
 			title: "Publication & Book Design",
-			description: "Magazine layouts, book design, annual reports, catalogs, and multi-page publications with professional typography and layout design.",
+			description:
+				"Magazines, books, catalogs, and reports with clean, professional layouts.",
 		},
 		{
 			title: "Packaging & Label Design",
-			description: "Product packaging, shipping materials, labels, and retail packaging that protects your products while reinforcing your brand identity."
+			description:
+				"Product packaging and labels that protect and promote your brand.",
 		},
-
 	];
 	return (
 		<section id="PrintsSection" className="section">

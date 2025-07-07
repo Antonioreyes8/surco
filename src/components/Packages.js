@@ -7,7 +7,7 @@ const Packages = () => {
 				<h3
 					style={{
 						textDecoration: "underline",
-						fontSize: "2em",
+						fontSize: "1.5em",
 					}}
 				>
 					Tier I
@@ -16,7 +16,8 @@ const Packages = () => {
 					style={{
 						listStyle: "none",
 						padding: 0,
-						fontFamily: "Delight-ExtraLight, sans-serif",
+						fontFamily: "Delight, sans-serif",
+						fontWeight: "400"
 					}}
 				>
 					<li style={{ marginBottom: "0.75rem" }}>+ Low involvement</li>
@@ -29,7 +30,7 @@ const Packages = () => {
 				<h3
 					style={{
 						textDecoration: "underline",
-						fontSize: "2em",
+						fontSize: "1.5em",
 					}}
 				>
 					Tier II
@@ -38,7 +39,8 @@ const Packages = () => {
 					style={{
 						listStyle: "none",
 						padding: 0,
-						fontFamily: "Delight-ExtraLight, sans-serif",
+						fontFamily: "Delight, sans-serif",
+						fontWeight: "400"
 					}}
 				>
 					<li style={{ marginBottom: "0.75rem" }}>+ Balanced involvement</li>
@@ -51,7 +53,7 @@ const Packages = () => {
 				<h3
 					style={{
 						textDecoration: "underline",
-						fontSize: "2em",
+						fontSize: "1.5em",
 					}}
 				>
 					Tier III
@@ -60,7 +62,8 @@ const Packages = () => {
 					style={{
 						listStyle: "none",
 						padding: 0,
-						fontFamily: "Delight-ExtraLight, sans-serif",
+						fontFamily: "Delight, sans-serif",
+						fontWeight: "400"
 					}}
 				>
 					<li style={{ marginBottom: "0.75rem" }}>+ Deep involvement</li>

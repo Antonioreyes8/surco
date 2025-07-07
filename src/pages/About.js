@@ -49,16 +49,6 @@ const About = () => {
 							resonate—with stories people remember, strategies they can grow
 							from, and design systems that reflect who they really are.
 						</p>
-
-						<p>
-							Surco's are tears or marks in the ground where seads are spread
-							and plants can grow. We see every project as an opportunity to
-							build something meaningful. Whether you're planting your first
-							seed or refining something long-established, we’re here to nurture
-							your vision and help it take root. Let’s create something that
-							leaves a mark—on your audience, on your community, and on the
-							world.
-						</p>
 					</div>
 				</div>
 			</div>

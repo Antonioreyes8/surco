@@ -45,9 +45,9 @@ const Sidebar = () => {
 						<a
 							href={`#${item.id}`}
 							style={{
-								fontFamily: "Delight-ExtraBold, sans-serif",
+								fontFamily: "Delight, sans-serif",
 								textDecoration: "none",
-								fontWeight: activeSection === item.id ? "bold" : "normal",
+								fontWeight: activeSection === item.id ? 800 : 800,
 								fontSize: activeSection === item.id ? "1.1em" : "1em",
 								color: activeSection === item.id ? "white" : "#666",
 								transition: "all 0.3s ease",

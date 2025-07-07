@@ -3,28 +3,31 @@ import "../styles/global.css";
 import PhotoCamera from "../assets/images/camera.png";
 
 const Photo = () => {
-		const webServices = [
+	const webServices = [
 		{
 			title: "Commercial & Product Photography",
-			description: "High-quality product shots, corporate headshots, and business portraits with professional lighting and post-production editing services.",
+			description:
+				"Clean product shots, headshots, and business portraits with pro lighting and editing.",
 		},
 		{
 			title: "Event Photography",
 			description:
-				"Comprehensive coverage of conferences, corporate events, team building activities, and promotional events with same-day delivery options.",
+				"Full coverage of corporate events and promos, with optional same-day delivery.",
 		},
 		{
 			title: "Photo Editing & Retouching",
-			description: "Professional image enhancement, background removal, color correction, and advanced retouching services for all types of photography.",
+			description:
+				"Image cleanup, background removal, color correction, and advanced retouching.",
 		},
 		{
 			title: "Stock Photography",
 			description:
-				"Custom stock images for marketing materials, website content, and social media that perfectly match your brand aesthetic and messaging.",
+				"Custom brand-aligned images for websites, ads, and social media.",
 		},
 		{
 			title: "Real Estate Photography",
-			description: "Property photography, virtual tours, drone photography, and architectural documentation for real estate professionals and construction companies.",
+			description:
+				"Property photos, drone shots, and virtual tours for real estate and construction.",
 		},
 	];
 	return (

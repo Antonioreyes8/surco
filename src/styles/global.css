@@ -3,19 +3,43 @@ html {
 }
 @font-face {
 	font-family: "Delight";
-	src: url("../assets/fonts/Delight-Regular.ttf") format("truetype");
+	src: url("../assets/fonts/Delight-ExtraLight.woff2") format("woff2"),
+	     url("../assets/fonts/Delight-ExtraLight.woff") format("woff");
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 @font-face {
 	font-family: "Delight";
-	src: url("../assets/fonts/Delight-Bold.ttf") format("truetype");
+	src: url("../assets/fonts/Delight-Regular.woff2") format("woff2"),
+	     url("../assets/fonts/Delight-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 @font-face {
 	font-family: "Delight";
-	src: url("../assets/fonts/Delight-ExtraBold.ttf") format("truetype");
+	src: url("../assets/fonts/Delight-Bold.woff2") format("woff2"),
+	     url("../assets/fonts/Delight-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 @font-face {
 	font-family: "Delight";
-	src: url("../assets/fonts/Delight-ExtraLight.ttf") format("truetype");
+	src: url("../assets/fonts/Delight-ExtraBold.woff2") format("woff2"),
+	     url("../assets/fonts/Delight-ExtraBold.woff") format("woff");
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 body {
 	background-color: black;
@@ -24,8 +48,9 @@ body {
 	color: white;
 }
 nav {
-	font-family: "Delight-ExtraBold", sans-serif;
+	font-family: "Delight", sans-serif;
 	z-index: 2;
+	font-weight: 800;
 }
 .section {
 	height: 150svh;
@@ -54,7 +79,8 @@ nav {
 	border-radius: 8px;
 	background-color: #1a1a1a;
 	flex-direction: column;
-	font-family: "Delight-Regular", sans-serif;
+	font-family: "Delight", sans-serif;
+	font-weight: 400;
 }
 
 .card:hover {
@@ -69,7 +95,8 @@ nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: "Delight-Regular", sans-serif;
+	font-family: "Delight", sans-serif;
+	font-weight: 400;
 	gap: 5rem;
 }
 
@@ -83,7 +110,8 @@ nav {
 	border-radius: 8px;
 	background-color: #1a1a1a;
 	flex-direction: column;
-	font-family: "Delight-Regular", sans-serif;
+	font-family: "Delight", sans-serif;
+	font-weight: 400;
 	position: relative;
 	overflow: hidden;
 }
@@ -131,9 +159,11 @@ nav {
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	font-family: "Delight-Regular", sans-serif;
-	width: 50%;
-	padding: 50px;
+	font-family: "Delight", sans-serif;
+	font-weight: 400;
+	width: 60%;
+	padding: 30px;
+	word-spacing: 3px;
 }
 
 .services-list {
@@ -153,18 +183,18 @@ nav {
 .section-image {
 	position: sticky;
 	top: 10rem;
-	width: 50%;
+	width: 40%;
 	height: 500px;
 	/*border: "white 1px solid", //Comment out when not needed*/
 }
 
 .packages-section {
-  /*border: solid white 1px; Only use to see border */
-  height: 60svh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
+	/*border: solid white 1px; Only use to see border */
+	height: 60svh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
 }
 
 /* Mobile styles - 768px and smaller */
@@ -176,7 +206,7 @@ nav {
 		background-color: black;
 		top: 0;
 		padding: 0px;
-    gap: 1px;
+		gap: 1px;
 	}
 
 	.push-content-left {
@@ -191,19 +221,19 @@ nav {
 	.footer {
 		flex-direction: column;
 		gap: 2rem;
-    font-size: .75rem;
+		font-size: 0.75rem;
 	}
 
 	.card {
 		width: 20vw;
 		height: 25vh;
 		padding: 10px;
-    font-size: .5rem;
+		font-size: 0.5rem;
 	}
 
 	.about {
 		margin-top: 250px;
-    font-size: .75rem;
+		font-size: 0.8rem;
 	}
 
 	.section-image {
@@ -212,15 +242,15 @@ nav {
 
 	.section {
 		height: auto;
-    width: 100%;
-    font-size: .75rem;
+		width: 100%;
+		font-size: 0.8rem;
 	}
 
 	.sidebar-words {
 		margin-bottom: 0.1rem;
 	}
 
-  .packages-section {
-    height: 40svh;
-  }
+	.packages-section {
+		height: 40svh;
+	}
 }
