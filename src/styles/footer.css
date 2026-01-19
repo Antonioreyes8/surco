@@ -1,0 +1,21 @@
+.footer {
+	height: 20svh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Delight", sans-serif;
+	font-weight: 400;
+	gap: 5rem;
+	color: white;
+}
+
+/* Mobile styles - 768px and smaller */
+@media (max-width: 768px) {
+    	.footer {
+		flex-direction: column;
+		gap: 2rem;
+		font-size: 0.75rem;
+	}
+
+}

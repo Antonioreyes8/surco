@@ -1,0 +1,59 @@
+.packages-section {
+	/*border: solid white 1px;*/
+	height: 50svh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+.promo {
+	transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40vh;
+	width: 40vh;
+	border-radius: 50%;
+	flex-direction: column;
+	font-family: "Delight", sans-serif;
+	font-weight: 400;
+	color: black;
+}
+
+.promo:hover {
+	transform: scale(1.1); /* Makes it bigger */
+	box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* glow */
+	border-color: white; /* Brighter border to stand out */
+}
+
+.PromosSection {
+	/*border: solid white 1px;*/
+	height: 100svh;
+}
+
+
+
+/* Mobile styles - 768px and smaller */
+@media (max-width: 768px) {
+
+    .promo {
+    width: 250px;
+    height: 250px;
+    font-size: 0.8rem;
+    border-radius: 50%;
+}
+
+	.packages-section {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+
+	.PromosSection {
+		height: 200svh;
+		padding-bottom: 30px;
+		padding-top: 100px;
+	}
+
+}

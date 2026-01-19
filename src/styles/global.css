@@ -4,7 +4,7 @@ html {
 @font-face {
 	font-family: "Delight";
 	src: url("../assets/fonts/Delight-ExtraLight.woff2") format("woff2"),
-	     url("../assets/fonts/Delight-ExtraLight.woff") format("woff");
+		url("../assets/fonts/Delight-ExtraLight.woff") format("woff");
 	font-weight: 200;
 	font-style: normal;
 	font-display: swap;
@@ -14,7 +14,7 @@ html {
 @font-face {
 	font-family: "Delight";
 	src: url("../assets/fonts/Delight-Regular.woff2") format("woff2"),
-	     url("../assets/fonts/Delight-Regular.woff") format("woff");
+		url("../assets/fonts/Delight-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -24,7 +24,7 @@ html {
 @font-face {
 	font-family: "Delight";
 	src: url("../assets/fonts/Delight-Bold.woff2") format("woff2"),
-	     url("../assets/fonts/Delight-Bold.woff") format("woff");
+		url("../assets/fonts/Delight-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -34,7 +34,7 @@ html {
 @font-face {
 	font-family: "Delight";
 	src: url("../assets/fonts/Delight-ExtraBold.woff2") format("woff2"),
-	     url("../assets/fonts/Delight-ExtraBold.woff") format("woff");
+		url("../assets/fonts/Delight-ExtraBold.woff") format("woff");
 	font-weight: 800;
 	font-style: normal;
 	font-display: swap;
@@ -44,114 +44,17 @@ html {
 body {
 	background-color: black;
 }
-* {
-	color: white;
-}
+
 nav {
 	font-family: "Delight", sans-serif;
 	z-index: 2;
 	font-weight: 800;
 }
 .section {
-	height: 150svh;
+	height: 200svh;
 	display: flex;
-}
-
-.about {
-	padding: 2rem;
-	width: 70%;
-	display: flex;
-	flex-direction: column;
-	background-color: #1a1a1a;
-	margin-top: 100px;
-	border-radius: 8px;
-	border: 0.5px solid #717171;
-}
-
-.card {
-	transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 50vh;
-	width: 30vh;
-	border: 0.5px solid #717171;
-	border-radius: 8px;
-	background-color: #1a1a1a;
-	flex-direction: column;
-	font-family: "Delight", sans-serif;
-	font-weight: 400;
-}
-
-.card:hover {
-	transform: scale(1.1); /* Makes it bigger */
-	box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* glow */
-	border-color: white; /* Brighter border to stand out */
-}
-
-.footer {
-	height: 20svh;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: "Delight", sans-serif;
-	font-weight: 400;
-	gap: 5rem;
-}
-
-.profile {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 23vh;
-	width: 20vh;
-	border: 0.5px solid #717171;
-	border-radius: 8px;
-	background-color: #1a1a1a;
-	flex-direction: column;
-	font-family: "Delight", sans-serif;
-	font-weight: 400;
-	position: relative;
-	overflow: hidden;
-}
-
-.profile img {
-	width: 27%;
-}
-
-.profile h2 {
-	opacity: 0;
-	transition: opacity 0.3s ease;
-	position: absolute;
-	bottom: 10px;
 	color: white;
-	font-size: 1rem;
-}
-
-.profile:hover h2 {
-	opacity: 1;
-}
-
-.profile:hover img {
-	transform: scale(1.2);
-}
-
-.sidebar {
-	position: fixed;
-	width: 250px;
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 15px;
-	z-index: 2;
-	/*border: solid 1px white;*/ /* Uncomment for debugging */
-}
-
-.sidebar-words {
-	margin-bottom: 1rem;
+	/*border: 1px solid white;*/
 }
 
 .section-words {
@@ -161,96 +64,55 @@ nav {
 	justify-content: center;
 	font-family: "Delight", sans-serif;
 	font-weight: 400;
-	width: 60%;
+	width: 50%;
 	padding: 30px;
 	word-spacing: 3px;
 }
 
-.services-list {
+.section-services-list {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
-.push-content-left {
+.push-content-right {
 	margin-left: 250px;
-}
-
-.sidebar-img {
-	width: 80%;
 }
 
 .section-image {
 	position: sticky;
-	top: 10rem;
-	width: 40%;
-	height: 500px;
-	/*border: "white 1px solid", //Comment out when not needed*/
-}
-
-.packages-section {
-	/*border: solid white 1px; Only use to see border */
-	height: 60svh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 30px;
+	top: 20svh;
+	width: 50%;
+	height: 30%;
+	/*border: 1px solid white;*/
 }
 
 /* Mobile styles - 768px and smaller */
 @media (max-width: 768px) {
-	.sidebar {
-		position: fixed;
-		width: 100svw;
-		height: auto;
-		background-color: black;
-		top: 0;
-		padding: 0px;
-		gap: 1px;
-	}
 
-	.push-content-left {
+	.push-content-right {
 		margin-left: 0px;
 	}
 
-	.sidebar-img {
-		width: 30%;
-		padding: 10px;
-	}
-
-	.footer {
-		flex-direction: column;
-		gap: 2rem;
-		font-size: 0.75rem;
-	}
-
-	.card {
-		width: 20vw;
-		height: 25vh;
-		padding: 10px;
-		font-size: 0.5rem;
-	}
-
-	.about {
-		margin-top: 250px;
-		font-size: 0.8rem;
-	}
-
 	.section-image {
-		top: 10rem;
+		width: auto;
+		position: static;
+		/*border: 1px solid white;*/
 	}
 
 	.section {
+		padding-top: 12svh;
+		width: auto;
 		height: auto;
-		width: 100%;
-		font-size: 0.8rem;
+		flex-direction: column;
+		align-items: center;
+		font-size: 12px;
+		/*border: 1px solid white;*/
 	}
 
-	.sidebar-words {
-		margin-bottom: 0.1rem;
-	}
-
-	.packages-section {
-		height: 40svh;
+	.section-words {
+		padding: 10px;
+		text-align: center;
+		width: 70%;
 	}
 }

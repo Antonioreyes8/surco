@@ -1,0 +1,50 @@
+.LanguagePage {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	z-index: 9999;
+}
+
+.LanguageButton:hover {
+	transform: scale(1.1);
+	border-color: white; /* Brighter border to stand out */
+	cursor: pointer;
+}
+
+.LanguageButton {
+	font-size: 2rem;
+	padding: 1rem 2rem;
+	border-radius: 8px;
+	border: none;
+	background: #fff;
+	color: #000;
+	cursor: pointer;
+	font-family: Delight, sans-serif;
+	font-weight: 700;
+}
+
+.Language-Header {
+	color: white;
+	font-family: Delight, sans-serif;
+	margin-bottom: 2rem;
+}
+
+/* Mobile styles - 768px and smaller */
+@media (max-width: 768px) {
+	.LanguageButton {
+		width: 150px;
+		height: 50px;
+		font-size: 1rem;
+	}
+
+	.Language-Header {
+	font-size: 1rem;
+}
+}
