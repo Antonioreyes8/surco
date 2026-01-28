@@ -17,22 +17,18 @@ const App = () => {
     const [language, setLanguage] = useState(null);
 
     useEffect(() => {
+        // 1. Check mobile immediately
         if (window.innerWidth < 700) {
             setShowVideo(false);
             setShowIntro(false);
-            return;
         }
-        const timer = setTimeout(() => setFadeOut(true), 3000);
-        const hideTimer = setTimeout(() => setShowIntro(false), 4200);
-        return () => {
-            clearTimeout(timer);
-            clearTimeout(hideTimer);
-        };
     }, []);
 
     const handleVideoEnd = () => {
+        // 2. Start fade out ONLY when video actually finishes
         setFadeOut(true);
-        setTimeout(() => setShowIntro(false), 1200);
+        // Wait for the CSS transition to finish before unmounting
+        setTimeout(() => setShowIntro(false), 1200); 
     };
 
     return (
@@ -45,8 +41,8 @@ const App = () => {
                         autoPlay
                         muted
                         playsInline
-                        preload="auto"
-                        disablePictureInPicture
+                        // Important: Ensure the video is ready
+                        onCanPlayThrough={() => console.log("Video ready")} 
                         onEnded={handleVideoEnd}
                     />
                 </div>
