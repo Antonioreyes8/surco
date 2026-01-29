@@ -7,8 +7,8 @@
  * - Sections: Multiple content sections displaying different service categories
  *   - About: Company mission and values
  *   - Web: Web development services
- *   - Design: Graphic and UX design work
- *   - PhotoVideo: Photography and videography portfolio
+ *   - Design: Graphic and UX design services
+ *   - PhotoVideo: Photography and videography services
  *   - Prints: Printing and physical media services
  *   - Promos: Special offers and packages
  *   - Footer: Contact and social links

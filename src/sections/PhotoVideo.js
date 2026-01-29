@@ -1,4 +1,5 @@
 import React from "react";
+import { useLanguage } from "../hooks/useLanguage";
 import "../styles/global.css";
 
 const SUPABASE_URL =
@@ -71,7 +72,8 @@ const mediaServices = [
 	},
 ];
 
-const PhotoVideo = ({ language }) => {
+const PhotoVideo = () => {
+	const { language } = useLanguage();
 	const lang = language === "es" ? "es" : "en";
 	return (
 		<section id="PhotoVideoSection" className="section">

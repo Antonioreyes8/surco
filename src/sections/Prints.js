@@ -1,4 +1,5 @@
 import React from "react";
+import { useLanguage } from "../hooks/useLanguage";
 import "../styles/global.css";
 
 const SUPABASE_URL =
@@ -64,7 +65,8 @@ const printServices = [
 	},
 ];
 
-const Prints = ({ language }) => {
+const Prints = () => {
+	const { language } = useLanguage();
 	const lang = language === "es" ? "es" : "en";
 	return (
 		<section id="PrintsSection" className="section">

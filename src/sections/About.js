@@ -1,9 +1,11 @@
 import React from "react";
+import { useLanguage } from "../hooks/useLanguage";
 
 const SUPABASE_URL =
 	"https://mmdfoamzwrlzlukgubaf.supabase.co/storage/v1/object/public/photos";
 
-const About = ({ language }) => {
+const About = () => {
+	const { language } = useLanguage();
 	return (
 		<section id="AboutSection" className="AboutSection">
 			{/* YOUR IDEA */}

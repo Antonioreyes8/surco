@@ -1,4 +1,5 @@
 import React from "react";
+import { useLanguage } from "../hooks/useLanguage";
 import "../styles/global.css";
 
 const SUPABASE_URL =
@@ -67,7 +68,8 @@ const DesignServices = [
 	},
 ];
 
-const Design = ({ language }) => {
+const Design = () => {
+	const { language } = useLanguage();
 	const lang = language === "es" ? "es" : "en";
 	return (
 		<section id="DesignSection" className="section">

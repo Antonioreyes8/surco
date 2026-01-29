@@ -44,14 +44,15 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 45px;
+	height: 48px;
 	/*border: white 1px solid;*/
 }
 
 .about-square-icon-wordflash img {
 	object-fit: contain;
 	display: block;
-	margin-left: 12px;
+	margin-left: 8px;
+	height: 100%;
 	/*border: white 1px solid;*/
 }
 
@@ -83,8 +84,8 @@
 }
 
 .about-square-icon-wordflash img[lang="es"] {
-	height: 130%;
-	margin-bottom: 2%;
+	height: 125%;
+	margin-bottom: 12px;
 }
 .about-square-icon-wordflash img[lang="en"] {
 	height: 100%;
@@ -92,7 +93,6 @@
 
 /* Mobile styles - 768px and smaller */
 @media (max-width: 768px) {
-
 	.AboutSection {
 		display: block;
 		height: min-content;
@@ -124,7 +124,7 @@
 		justify-content: flex-start; /* keeps icons together */
 	}
 	.about-square-icon-wordflash img {
-		margin-left: 5px;
+		margin-left: 3px;
 	}
 
 	.about-square-icon-wordflash {
@@ -132,6 +132,6 @@
 		/*border: white 1px solid;*/
 	}
 	.about-square-icon-wordflash img[lang="es"] {
-		margin-bottom: 2.5%;
+		margin-bottom: 0;
 	}
 }
