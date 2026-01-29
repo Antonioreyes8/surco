@@ -1,9 +1,34 @@
+/**
+ * @file Web.js
+ * @description Web development services section
+ *
+ * PURPOSE:
+ * Showcases Surco's web development and online services capabilities.
+ * Includes detailed service descriptions in English and Spanish.
+ *
+ * SERVICES DISPLAYED:
+ * - Web Hosting & Maintenance
+ * - SEO & Analytics
+ * - E-commerce
+ * - Blog Development & CMS
+ * - API Integration Services
+ * - Membership & Subscription Platforms
+ * - Social Platform Development
+ */
+
 import React from "react";
+import { useLanguage } from "../hooks/useLanguage";
 import "../styles/global.css";
 
+// Supabase CDN URL for hosted assets
 const SUPABASE_URL =
 	"https://mmdfoamzwrlzlukgubaf.supabase.co/storage/v1/object/public/photos";
 
+/**
+ * Web services data
+ * Each service has bilingual title and description
+ * Structure allows easy addition of new services
+ */
 const webServices = [
 	{
 		title: {
@@ -68,14 +93,36 @@ const webServices = [
 	},
 ];
 
-const Web = ({ language }) => {
+/**
+ * Web Services Section Component
+ *
+ * @component
+ * @returns {React.ReactElement} Web services portfolio section with bilingual content
+ *
+ * LAYOUT:
+ * - Left: Animated GIF showcasing web development
+ * - Right: Service list with descriptions
+ *
+ * FEATURES:
+ * - Bilingual support (English/Spanish)
+ * - Dynamic service rendering from data array
+ * - SEO-friendly semantic HTML
+ * - Accessible alt text for images
+ */
+const Web = () => {
+	// Get current language from global context
+	const { language } = useLanguage();
+
+	// Determine language for display
 	const lang = language === "es" ? "es" : "en";
+
 	return (
 		<section id="WebSection" className="section">
+			{/* LEFT SIDE: Animated visual */}
 			<div className="section-image">
 				<img
 					src={`${SUPABASE_URL}/gifs/computer.gif`}
-					alt="Sticky landscape"
+					alt="Web development illustration"
 					style={{
 						width: "100%",
 						height: "100%",
@@ -83,8 +130,12 @@ const Web = ({ language }) => {
 					}}
 				/>
 			</div>
+
+			{/* RIGHT SIDE: Service descriptions */}
 			<div className="section-words">
 				<h2>{lang === "es" ? "Servicios de Web" : "Web Services"}</h2>
+
+				{/* Service List - Rendered from webServices array */}
 				<ul className="section-services-list">
 					{webServices.map((service, index) => (
 						<li key={index}>
