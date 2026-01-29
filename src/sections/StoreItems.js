@@ -8,6 +8,70 @@ const StoreItems = () => {
 	return (
 		<div className="store-items-container">
 			<h2>{language === "es" ? "Productos" : "Products"}</h2>
+			<div
+				style={{
+					display: "flex",
+					alignItems: "center",
+					gap: "24px",
+					marginBottom: "1.5rem",
+					flexWrap: "wrap",
+				}}
+			>
+				{/* Green dot legend for Website items */}
+				<div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+					<span
+						style={{
+							height: "12px",
+							width: "12px",
+							borderRadius: "50%",
+							backgroundColor: "#b2d236",
+							display: "inline-block",
+						}}
+					></span>
+					<span style={{ fontSize: "14px", fontWeight: "500" }}>Website</span>
+				</div>
+				{/* Red dot legend for Design items */}
+				<div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+					<span
+						style={{
+							height: "12px",
+							width: "12px",
+							borderRadius: "50%",
+							backgroundColor: "#D34E43",
+							display: "inline-block",
+						}}
+					></span>
+					<span style={{ fontSize: "14px", fontWeight: "500" }}>Design</span>
+				</div>
+				{/* White dot legend for Photo/Video items */}
+				<div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+					<span
+						style={{
+							height: "12px",
+							width: "12px",
+							borderRadius: "50%",
+							backgroundColor: "#EAF0DF",
+							display: "inline-block",
+						}}
+					></span>
+					<span style={{ fontSize: "14px", fontWeight: "500" }}>
+						Photo/Video
+					</span>
+				</div>
+				{/* Blue dot legend for Print items */}
+				<div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+					<span
+						style={{
+							height: "12px",
+							width: "12px",
+							borderRadius: "50%",
+							backgroundColor: "#4EC1D3",
+							display: "inline-block",
+						}}
+					></span>
+					<span style={{ fontSize: "14px", fontWeight: "500" }}>Prints</span>
+				</div>
+			</div>
 			<div className="web-store-items">
 				<div className="item">
 					<h3>
@@ -280,9 +344,7 @@ const StoreItems = () => {
 				</div>
 				<div className="item">
 					<h3>
-						{language === "es"
-							? "Gráficos de Gran Formato"
-							: "Large Format"}
+						{language === "es" ? "Gráficos de Gran Formato" : "Large Format"}
 					</h3>
 					<p>
 						{language === "es"
@@ -306,7 +368,9 @@ const StoreItems = () => {
 				</div>
 				<div className="item">
 					<h3>
-						{language === "es" ? "Señalización y Gráficos Ambientales" : "Signage & Environmental Graphics"}
+						{language === "es"
+							? "Señalización y Gráficos Ambientales"
+							: "Signage & Environmental Graphics"}
 					</h3>
 					<p>
 						{language === "es"
