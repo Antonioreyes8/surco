@@ -92,7 +92,7 @@ const Sidebar = () => {
 
 	return (
 		<div className="sidebar">
-			{/* Logo image from Supabase CDN */}
+			{/* Logo */}
 			<img
 				src={`${SUPABASE_URL}/images/SurcoLogo.png`}
 				alt="Surco logo"
@@ -118,7 +118,7 @@ const Sidebar = () => {
 								// RESPONSIVE SCROLLING:
 								if (window.innerWidth <= 768) {
 									// MOBILE: Scroll with offset to account for fixed sidebars/headers
-									const offset = -100; // Adjust to match your nav height
+									const offset = -230; // Adjust to match your nav height
 									const y =
 										target.getBoundingClientRect().top +
 										window.pageYOffset +
