@@ -5,16 +5,12 @@
  * PURPOSE:
  * Displays merchandise and products for sale.
  * Supports bilingual content (English and Spanish).
- *
- * FUTURE ENHANCEMENTS:
- * - Integrate Packages component for product listings
- * - Add shopping cart functionality
- * - Implement payment processing
- * - Display product inventory
  */
 
 import React from "react";
-import { useLanguage } from "../hooks/useLanguage";
+import Cart from "../sections/Cart.js";
+import StoreItems from "../sections/StoreItems.js";
+import "../styles/store.css";
 
 /**
  * Store Page Component
@@ -23,18 +19,13 @@ import { useLanguage } from "../hooks/useLanguage";
  * @returns {React.ReactElement} Store page with product listings
  */
 const Store = () => {
-	// Access language from global context
-	const { language } = useLanguage();
-
 	return (
-		<div className="store-page" style={{ padding: "2rem", color: "white" }}>
-			<h1>{language === "es" ? "Tienda" : "Store"}</h1>
-			<p>
-				{language === "es"
-					? "Aquí va el contenido de la tienda."
-					: "Store content goes here."}
-			</p>
-			{/* TODO: Add StoreItems or Packages components here */}
+		<div
+			className="store-page"
+			style={{ color: "white", fontFamily: "Delight, sans-serif" }}
+		>
+			<StoreItems />
+			<Cart />
 		</div>
 	);
 };

@@ -38,8 +38,8 @@ const navigationLabels = {
 		DesignSection: "Design",
 		PhotoVideoSection: "Photo/Video",
 		PrintsSection: "Prints",
-		PromosSection: "Work with us",
-		Store: "Store",
+		PromosSection: "Promos",
+		Store: "Work with us",
 	},
 	es: {
 		AboutSection: "Sobre nosotros",
@@ -47,8 +47,8 @@ const navigationLabels = {
 		DesignSection: "Diseño",
 		PhotoVideoSection: "Foto/Video",
 		PrintsSection: "Impresión",
-		PromosSection: "Trabaja con nosotros",
-		Store: "Tienda",
+		PromosSection: "Promociones",
+		Store: "Trabaja con nosotros",
 	},
 };
 
@@ -160,18 +160,7 @@ const Sidebar = () => {
 				<li className="sidebar-words" style={{ marginTop: "20px" }}>
 					<Link
 						to="/store"
-						style={{
-							display: "block",
-							fontFamily: "Delight, sans-serif",
-							fontWeight: 800,
-							fontSize: "1em",
-							color: "#666",
-							textDecoration: "none",
-							transition: "all 0.3s ease",
-						}}
-						// Hover effect: change text to white
-						onMouseEnter={(e) => (e.target.style.color = "white")}
-						onMouseLeave={(e) => (e.target.style.color = "#666")}
+						className="sidebar-store-link"
 					>
 						{navigationLabels[lang].Store}
 					</Link>

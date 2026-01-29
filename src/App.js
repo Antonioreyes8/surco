@@ -28,6 +28,7 @@ import "./styles/promos.css";
 import "./styles/intro.css";
 import "./styles/footer.css";
 import "./styles/language.css";
+import "./styles/store.css";
 
 // Import intro video asset
 import introVideo from "./assets/videos/intro.mp4";

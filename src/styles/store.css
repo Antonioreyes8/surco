@@ -1,0 +1,104 @@
+.cart-container {
+	position: fixed;
+	width: 30svw;
+	right: 0;
+	top: 7px;
+	padding: 2rem;
+	/*border: 1px solid white;*/
+}
+
+.store-items-container {
+	/*border: 1px solid white;*/
+	padding: 2rem;
+	width: 50svw;
+}
+
+.item:hover{
+	cursor: pointer;
+	box-shadow: white 0 0 15px;
+}
+
+/* Web store items */
+.web-store-items .item {
+	background: rgba(255, 255, 255, 0.05);
+	padding: 1rem;
+	margin: 1rem 0;
+	border-radius: 4px;
+	border-left: 3px solid #b2d236;
+}
+
+.web-store-items .item h3 {
+	margin: 0 0 0.5rem 0;
+	color: white;
+}
+
+.web-store-items .item span {
+	display: block;
+	font-weight: 700;
+	color: #b2d236;
+	font-size: 1.2em;
+}
+
+/* Design store items */
+.design-store-items .item {
+	background: rgba(255, 255, 255, 0.05);
+	padding: 1rem;
+	margin: 1rem 0;
+	border-radius: 4px;
+	border-left: 3px solid #D34E43;
+}
+
+.design-store-items .item h3 {
+	margin: 0 0 0.5rem 0;
+	color: white;
+}
+
+.design-store-items .item span {
+	display: block;
+	font-weight: 700;
+	color: #D34E43;
+	font-size: 1.2em;
+}
+
+/* PhotoVideo store items */
+.photovideo-store-items .item {
+	background: rgba(255, 255, 255, 0.05);
+	padding: 1rem;
+	margin: 1rem 0;
+	border-radius: 4px;
+	border-left: 3px solid #EAF0DF;
+}
+
+.photovideo-store-items .item h3 {
+	margin: 0 0 0.5rem 0;
+	color: white;
+}
+
+.photovideo-store-items .item span {
+	display: block;
+	font-weight: 700;
+	color: #EAF0DF;
+	font-size: 1.2em;
+}
+
+/* Prints store items */
+.prints-store-items .item {
+	background: rgba(255, 255, 255, 0.05);
+	padding: 1rem;
+	margin: 1rem 0;
+	border-radius: 4px;
+	border-left: 3px solid #4EC1D3;
+}
+
+.prints-store-items .item h3 {
+	margin: 0 0 0.5rem 0;
+	color: white;
+}
+
+.prints-store-items .item span {
+	display: block;
+	font-weight: 700;
+	color: #4EC1D3;
+	font-size: 1.2em;
+}
+
