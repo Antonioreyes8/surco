@@ -63,17 +63,16 @@
 /* Mobile styles - 768px and smaller */
 @media (max-width: 768px) {
 	.navbar {
-		position: fixed;
-		width: 100svw;
 		height: auto;
+		width: 100svw;
 		background-color: black;
 		top: 0;
-		padding: 0px;
 		gap: 0px;
+		padding: 0px;
 	}
 
 	.navbar-img {
-		width: 25%;
+		width: 30%;
 		padding: 10px;
 	}
 
@@ -84,6 +83,7 @@
 	.navbar-store-link {
 		padding: 5px;
 		margin-top: 0;
+		width: 150px;
 	}
 
 	.navbar-list {
@@ -94,5 +94,12 @@
 		align-items: center;
 		gap: 12px;
 		padding: 0 10px 10px;
+	}
+
+	.navbar-store-item {
+		flex-basis: 100%;
+		text-align: center;
+		display: flex;
+		justify-content: center;
 	}
 }

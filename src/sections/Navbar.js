@@ -114,7 +114,7 @@ const Navbar = () => {
 								// RESPONSIVE SCROLLING:
 								if (window.innerWidth <= 768) {
 									// MOBILE: Scroll with offset to account for fixed navbars/headers
-									const offset = -150; // Adjust to match your nav height
+									const offset = -100; // Adjust to match your nav height
 									const y =
 										target.getBoundingClientRect().top +
 										window.pageYOffset +

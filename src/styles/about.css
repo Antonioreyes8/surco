@@ -96,7 +96,8 @@
 	.AboutSection {
 		display: block;
 		height: min-content;
-		margin-top: 250px;
+		/*pushing top down to avoid navbar overlap*/
+		margin-top: 180px;
 		font-size: 12px;
 		padding: 1rem;
 		width: 80svw;
@@ -132,6 +133,6 @@
 		/*border: white 1px solid;*/
 	}
 	.about-square-icon-wordflash img[lang="es"] {
-		margin-bottom: 0;
+		margin-bottom: 3px;
 	}
 }
