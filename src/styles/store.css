@@ -202,6 +202,7 @@
 	color: white;
 	width: 50%;
 	cursor: pointer;
+	margin-top: 8px;
 }
 .send-btn:disabled {
 	opacity: 0.5;

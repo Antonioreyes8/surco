@@ -5,12 +5,17 @@ import "../styles/store.css";
 const Cart = ({ isOpen, onClose, cart = [], onRemove }) => {
 	const [state] = useForm("mzdgyqkg");
 	const [email, setEmail] = useState("");
+	const [firstandlastName, setFirstandLastName] = useState("");
+	const [company, setCompany] = useState("");
+	const [submitted, setSubmitted] = useState(false);
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
 		const cartBody = cart.map((i) => `${i.name} — ${i.price}`).join("\n");
 		const formData = new FormData();
 		formData.append("email", email);
+		formData.append("firstandlastName", firstandlastName);
+		formData.append("company", company);
 		formData.append("message", `Cart Contents:\n\n${cartBody}`);
 
 		const result = await fetch("https://formspree.io/f/mzdgyqkg", {
@@ -20,7 +25,10 @@ const Cart = ({ isOpen, onClose, cart = [], onRemove }) => {
 
 		if (result.ok) {
 			setEmail("");
-			alert("Cart sent successfully!");
+			setFirstandLastName("");
+			setCompany("");
+			setSubmitted(true);
+			setTimeout(() => setSubmitted(false), 3000);
 		}
 	};
 
@@ -56,8 +64,40 @@ const Cart = ({ isOpen, onClose, cart = [], onRemove }) => {
 			<div className="email-form">
 				<form onSubmit={onSubmit}>
 					<label
-						htmlFor="email"
+						htmlFor="firstandlastName"
 						style={{ display: "block", marginBottom: "6px" }}
+					>
+						First and Last name
+					</label>
+					<input
+						id="firstandlastName"
+						type="text"
+						name="firstandlastName"
+						placeholder="John Doe"
+						value={firstandlastName}
+						onChange={(e) => setFirstandLastName(e.target.value)}
+						required
+					/>
+
+					<label
+						htmlFor="company"
+						style={{ display: "block", marginBottom: "6px", marginTop: "12px" }}
+					>
+						Company Name
+					</label>
+					<input
+						id="company"
+						type="text"
+						name="company"
+						placeholder="Your Company"
+						value={company}
+						onChange={(e) => setCompany(e.target.value)}
+						required
+					/>
+
+					<label
+						htmlFor="email"
+						style={{ display: "block", marginBottom: "6px", marginTop: "12px" }}
 					>
 						Email
 					</label>
@@ -74,13 +114,23 @@ const Cart = ({ isOpen, onClose, cart = [], onRemove }) => {
 					<button
 						type="submit"
 						className="send-btn"
-						disabled={!email || cart.length === 0 || state.submitting}
+						disabled={
+							!email || !firstandlastName || !company || cart.length === 0
+						}
+						style={{ marginTop: "12px" }}
 					>
-						{state.submitting ? "Sending..." : "Send Cart"}
+						Send Cart
 					</button>
-					{state.succeeded && (
-						<p style={{ fontSize: "12px", marginTop: "8px", color: "#b2d236" }}>
-							Cart sent successfully!
+					{submitted && (
+						<p
+							style={{
+								fontSize: "12px",
+								marginTop: "8px",
+								color: "#b2d236",
+								fontWeight: "600",
+							}}
+						>
+							✓ Cart sent successfully! We'll be in touch soon.
 						</p>
 					)}
 				</form>
