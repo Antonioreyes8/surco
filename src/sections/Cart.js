@@ -43,7 +43,7 @@ const Cart = ({ isOpen, onClose, cart = [], onRemove }) => {
 			</div>
 
 			<div className="email-form">
-				<label style={{ display: "block", marginBottom: "6px" }}>Email</label>
+				<label style={{ display: "block", marginBottom: "6px" }}>Email:</label>
 				<input
 					type="email"
 					placeholder="you@example.com"
