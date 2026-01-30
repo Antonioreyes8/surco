@@ -3,7 +3,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import "../styles/store.css";
 
 const Cart = ({ isOpen, onClose, cart = [], onRemove }) => {
-	const [state, handleSubmit] = useForm("mzdgyqkg");
+	const [state] = useForm("mzdgyqkg");
 	const [email, setEmail] = useState("");
 
 	const onSubmit = async (e) => {
