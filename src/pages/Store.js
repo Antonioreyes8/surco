@@ -19,7 +19,7 @@ const Store = () => {
 
 			{/* MOBILE FAB */}
 			<button className="cart-fab" onClick={toggleCart}>
-				🛒
+				<i class="fa-solid fa-cart-shopping"></i>
 			</button>
 		</div>
 	);
