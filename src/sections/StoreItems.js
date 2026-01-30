@@ -439,6 +439,21 @@ const StoreItems = ({ onAdd }) => {
 							: "Brand stories, product demos, and service overviews that turn viewers into customers."}
 					</p>
 					<span>$300 - $1,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Videos Promocionales y Explicativos"
+										: "Promotional & Explainer Videos",
+								price: "$150 – $500",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -452,6 +467,21 @@ const StoreItems = ({ onAdd }) => {
 							: "Reels, TikToks, and short-form videos optimized for engagement and reach."}
 					</p>
 					<span>$100 - $1,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Contenido de Video para Redes Sociales"
+										: "Social Media Video Content",
+								price: "$100 - $1,000",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -465,6 +495,21 @@ const StoreItems = ({ onAdd }) => {
 							: "Color grading, sound design, VFX, and edits for all types of video content."}
 					</p>
 					<span>$200 - $1,500</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Edición de Video y Postproducción"
+										: "Video Editing & Post-Production",
+								price: "$200 - $1,500",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -478,6 +523,21 @@ const StoreItems = ({ onAdd }) => {
 							: "Clean product shots, headshots, and business portraits with pro lighting and editing."}
 					</p>
 					<span>$300 - $2,500</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Fotografía Comercial y de Producto"
+										: "Commercial & Product Photography",
+								price: "$300 - $2,500",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -489,6 +549,21 @@ const StoreItems = ({ onAdd }) => {
 							: "Full coverage of corporate events and promos, with optional same-day delivery."}
 					</p>
 					<span>$400 - $1,500</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Fotografía de Eventos"
+										: "Event Photography",
+								price: "$400 - $1,500",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -502,6 +577,21 @@ const StoreItems = ({ onAdd }) => {
 							: "Image cleanup, background removal, color correction, and advanced retouching."}
 					</p>
 					<span>$30 - $100 per image</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Edición y Retoque Fotográfico"
+										: "Photo Editing & Retouching",
+								price: "$30 - $100 per image",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -515,6 +605,21 @@ const StoreItems = ({ onAdd }) => {
 							: "Property photos, drone shots, and virtual tours for real estate and construction."}
 					</p>
 					<span>$200 - $1,500</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Fotografía Inmobiliaria"
+										: "Real Estate Photography",
+								price: "$200 - $1,500",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 			</div>
 			<div className="prints-store-items">
@@ -530,6 +635,21 @@ const StoreItems = ({ onAdd }) => {
 							: "Brochures, flyers, business cards, and letterheads that reflect your brand clearly."}
 					</p>
 					<span>$150 – $1,500</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Materiales de Marketing y Publicidad"
+										: "Marketing Materials & Collateral",
+								price: "$150 – $1,500",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -541,6 +661,21 @@ const StoreItems = ({ onAdd }) => {
 							: "Banners, posters, and displays designed to draw attention at events and exhibits."}
 					</p>
 					<span>$300 – $2,500</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Gráficos de Gran Formato"
+										: "Large Format",
+								price: "$300 – $2,500",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -554,6 +689,21 @@ const StoreItems = ({ onAdd }) => {
 							: "Branded apparel, gifts, and merch that keep your brand top-of-mind."}
 					</p>
 					<span>$200 – $2,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Mercancía Personalizada y Artículos Promocionales"
+										: "Custom Merchandise & Promotional Items",
+								price: "$200 – $2,000",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -567,6 +717,21 @@ const StoreItems = ({ onAdd }) => {
 							: "Indoor/outdoor signage, wayfinding, and graphics that enhance physical spaces."}
 					</p>
 					<span>$400 – $5,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Señalización y Gráficos Ambientales"
+										: "Signage & Environmental Graphics",
+								price: "$400 – $5,000",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -580,6 +745,21 @@ const StoreItems = ({ onAdd }) => {
 							: "Magazines, books, catalogs, and reports with clean, professional layouts."}
 					</p>
 					<span>$750 – $5,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Diseño de Publicaciones y Libros"
+										: "Publication & Book Design",
+								price: "$750 – $5,000",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -593,6 +773,21 @@ const StoreItems = ({ onAdd }) => {
 							: "Product packaging and labels that protect and promote your brand."}
 					</p>
 					<span>$500 – $4,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Diseño de Empaques y Etiquetas"
+										: "Packaging & Label Design",
+								price: "$500 – $4,000",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 			</div>
 		</div>
