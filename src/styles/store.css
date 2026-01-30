@@ -259,6 +259,7 @@
 		font-size: 1.6rem;
 		border: none;
 		z-index: 100;
+		color: black;
 	}
 
 	/* CLOSE BUTTON */
@@ -268,5 +269,6 @@
 		right: 15px;
 		background: none;
 		border: none;
+		color: black;
 	}
 }
