@@ -59,10 +59,18 @@
 /* Mobile styles - 768px and smaller */
 @media (max-width: 768px) {
 	.promo {
-		width: 250px;
-		height: 250px;
-		font-size: 0.8rem;
+		width: 150px;
+		height: 150px;
+		font-size: 0.5rem;
 		border-radius: 50%;
+	}
+
+	.PromosSection h2 {
+		font-size: 1em;
+	}
+
+	.PromosSection h4 {
+		font-size: 1em;
 	}
 
 	.packages-section {
@@ -72,7 +80,7 @@
 	}
 
 	.PromosSection {
-		height: 200svh;
+		height: 150svh;
 		padding-bottom: 30px;
 		padding-top: 100px;
 	}

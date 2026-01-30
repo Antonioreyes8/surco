@@ -51,7 +51,7 @@ const Work_with_us = () => {
 				<div
 					style={{
 						color: "white",
-						fontSize: "2em",
+						fontSize: "1.5em",
 						fontFamily: "Delight, sans-serif",
 						fontWeight: 700,
 					}}
@@ -86,7 +86,7 @@ const Work_with_us = () => {
 				<div
 					style={{
 						color: "white",
-						fontSize: "2em",
+						fontSize: "1.5em",
 						fontFamily: "Delight, sans-serif",
 						fontWeight: 700,
 					}}

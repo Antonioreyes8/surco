@@ -40,7 +40,7 @@ export const useActiveSection = (sectionIds) => {
         // threshold: How much of the element needs to be visible to trigger
         // Multiple values means it will trigger at different visibility percentages
         // [0, 0.1, 0.2...] means trigger at 0%, 10%, 20%, etc. visibility
-        threshold: 0.3,
+        threshold: .4,
         
         // rootMargin: Shrinks or expands the viewport area used for calculations
         // '-10% 0px -10% 0px' means ignore the top 10% and bottom 10% of viewport

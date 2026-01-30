@@ -97,7 +97,7 @@
 		display: block;
 		height: min-content;
 		/*pushing top down to avoid navbar overlap*/
-		margin-top: 180px;
+		margin-top: 200px;
 		font-size: 12px;
 		padding: 1rem;
 		width: 80svw;
