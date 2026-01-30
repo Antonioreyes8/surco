@@ -6,16 +6,21 @@ import "../styles/store.css";
 const Store = () => {
 	const [cartOpen, setCartOpen] = useState(false);
 	const [cart, setCart] = useState([]);
-	const [nextId, setNextId] = useState(1);
+	const [nextId, setNextId] = useState(0);
 
 	const toggleCart = () => {
 		setCartOpen((prev) => !prev);
 	};
 
 	const addToCart = (item) => {
-		const entry = { id: nextId, ...item };
-		setNextId((n) => n + 1);
-		setCart((prev) => [...prev, entry]);
+		setCart((prev) => {
+			const exists = prev.some((i) => i.name === item.name);
+			if (exists) return prev;
+
+			const entry = { id: nextId, ...item };
+			setNextId((n) => n + 1);
+			return [...prev, entry];
+		});
 		setCartOpen(true);
 	};
 
@@ -27,7 +32,6 @@ const Store = () => {
 		<div className="store-page">
 			<StoreItems onAdd={addToCart} />
 
-			{/* CART */}
 			<Cart
 				isOpen={cartOpen}
 				onClose={() => setCartOpen(false)}
@@ -35,7 +39,6 @@ const Store = () => {
 				onRemove={removeFromCart}
 			/>
 
-			{/* MOBILE FAB */}
 			<button className="cart-fab" onClick={toggleCart}>
 				<i className="fa-solid fa-cart-shopping"></i>
 			</button>
