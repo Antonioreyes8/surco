@@ -1,7 +1,6 @@
 .store-page {
 	color: white;
 	font-family: Delight, sans-serif;
-	width: 100svw;
 }
 
 /* =========================
@@ -151,7 +150,9 @@
 
 @media (max-width: 768px) {
 	.store-items-container {
-		width: 100svw;
+		width: 100%;
+		padding: 1rem; /* reduce from 2rem */
+		box-sizing: border-box; /* include padding in width calculation */
 	}
 	/* SLIDE-UP CART */
 	.cart-container {

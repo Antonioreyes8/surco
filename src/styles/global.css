@@ -47,6 +47,7 @@ html {
 }
 body {
 	background-color: black;
+	overflow-x: hidden;
 }
 
 /* Utility: Reset button to appear as text */
