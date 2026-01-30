@@ -22,7 +22,7 @@ import { LanguageContext } from "./context/LanguageContext";
 
 // Import global stylesheets
 import "./styles/global.css";
-import "./styles/sidebar.css";
+import "./styles/navbar.css";
 import "./styles/about.css";
 import "./styles/promos.css";
 import "./styles/intro.css";

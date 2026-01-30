@@ -22,6 +22,7 @@ import { useActiveSection } from "../hooks/useActiveSection";
 import { useLanguage } from "../hooks/useLanguage";
 import { Link } from "react-router-dom";
 import "../styles/global.css";
+import "../styles/navbar.css";
 
 // Supabase CDN URL for hosting images and assets
 const SUPABASE_URL =
@@ -62,7 +63,7 @@ const navigationLabels = {
  * - Gets language from global LanguageContext via useLanguage hook
  * - Gets activeSection from useActiveSection hook (scroll-based)
  */
-const Sidebar = () => {
+const Navbar = () => {
 	// Get current language from global context
 	const { language } = useLanguage();
 
@@ -91,24 +92,19 @@ const Sidebar = () => {
 	}));
 
 	return (
-		<div className="sidebar">
+		<div className="navbar">
 			{/* Logo */}
 			<img
 				src={`${SUPABASE_URL}/images/SurcoLogo.png`}
 				alt="Surco logo"
-				className="sidebar-img"
+				className="navbar-img"
 			/>
 
 			{/* Navigation List */}
-			<ul
-				style={{
-					listStyle: "none",
-					padding: 0,
-				}}
-			>
+			<ul className="navbar-list">
 				{/* PORTFOLIO SECTION LINKS */}
 				{navigationItems.map((item) => (
-					<li key={item.id} className="sidebar-words">
+					<li key={item.id} className="navbar-words">
 						<button
 							onClick={() => {
 								// Find the target section by ID
@@ -117,8 +113,8 @@ const Sidebar = () => {
 
 								// RESPONSIVE SCROLLING:
 								if (window.innerWidth <= 768) {
-									// MOBILE: Scroll with offset to account for fixed sidebars/headers
-									const offset = -230; // Adjust to match your nav height
+									// MOBILE: Scroll with offset to account for fixed navbars/headers
+									const offset = -150; // Adjust to match your nav height
 									const y =
 										target.getBoundingClientRect().top +
 										window.pageYOffset +
@@ -136,20 +132,7 @@ const Sidebar = () => {
 									});
 								}
 							}}
-							style={{
-								background: "none",
-								border: "none",
-								padding: 0,
-								fontFamily: "Delight, sans-serif",
-								// Highlight active section with larger font and white color
-								fontWeight: activeSection === item.id ? 800 : 800,
-								fontSize: activeSection === item.id ? "1.1em" : "1em",
-								color: activeSection === item.id ? "white" : "#666",
-								cursor: "pointer",
-								textAlign: "left",
-								textDecoration: "none",
-								transition: "all 0.3s ease",
-							}}
+							className={`navbar-button ${activeSection === item.id ? "active" : ""}`}
 						>
 							{item.label}
 						</button>
@@ -157,11 +140,8 @@ const Sidebar = () => {
 				))}
 
 				{/* STORE LINK */}
-				<li className="sidebar-words" style={{ marginTop: "20px" }}>
-					<Link
-						to="/store"
-						className="sidebar-store-link"
-					>
+				<li className="navbar-words navbar-store-item">
+					<Link to="/store" className="navbar-store-link">
 						{navigationLabels[lang].Store}
 					</Link>
 				</li>
@@ -170,4 +150,4 @@ const Sidebar = () => {
 	);
 };
 
-export default Sidebar;
+export default Navbar;

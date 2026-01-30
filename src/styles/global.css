@@ -3,7 +3,8 @@ html {
 }
 @font-face {
 	font-family: "Delight";
-	src: url("../assets/fonts/Delight-ExtraLight.woff2") format("woff2"),
+	src:
+		url("../assets/fonts/Delight-ExtraLight.woff2") format("woff2"),
 		url("../assets/fonts/Delight-ExtraLight.woff") format("woff");
 	font-weight: 200;
 	font-style: normal;
@@ -13,7 +14,8 @@ html {
 }
 @font-face {
 	font-family: "Delight";
-	src: url("../assets/fonts/Delight-Regular.woff2") format("woff2"),
+	src:
+		url("../assets/fonts/Delight-Regular.woff2") format("woff2"),
 		url("../assets/fonts/Delight-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
@@ -23,7 +25,8 @@ html {
 }
 @font-face {
 	font-family: "Delight";
-	src: url("../assets/fonts/Delight-Bold.woff2") format("woff2"),
+	src:
+		url("../assets/fonts/Delight-Bold.woff2") format("woff2"),
 		url("../assets/fonts/Delight-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal;
@@ -33,7 +36,8 @@ html {
 }
 @font-face {
 	font-family: "Delight";
-	src: url("../assets/fonts/Delight-ExtraBold.woff2") format("woff2"),
+	src:
+		url("../assets/fonts/Delight-ExtraBold.woff2") format("woff2"),
 		url("../assets/fonts/Delight-ExtraBold.woff") format("woff");
 	font-weight: 800;
 	font-style: normal;
@@ -43,6 +47,16 @@ html {
 }
 body {
 	background-color: black;
+}
+
+/* Utility: Reset button to appear as text */
+button:is(.button-reset, .sidebar-button, .navbar-button) {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	text-decoration: none;
+	font-family: inherit;
 }
 
 nav {
@@ -89,7 +103,6 @@ nav {
 
 /* Mobile styles - 768px and smaller */
 @media (max-width: 768px) {
-
 	.push-content-right {
 		margin-left: 0px;
 	}

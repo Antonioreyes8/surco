@@ -19,7 +19,7 @@
  */
 
 import React from "react";
-import Sidebar from "../sections/Sidebar";
+import Sidebar from "../sections/Navbar";
 import Web from "../sections/Web";
 import Design from "../sections/Design";
 import PhotoVideo from "../sections/PhotoVideo";
