@@ -56,6 +56,20 @@
 	font-size: 1.2em;
 }
 
+.add-btn {
+	margin-top: 25px;
+	background: transparent;
+	color: white;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	border: none;
+	font-size: 1.5em;
+}
+.add-btn:hover {
+	opacity: 0.9;
+}
+
 /* =========================
    DESIGN STORE ITEMS
    ========================= */
@@ -136,6 +150,62 @@
 	display: none;
 }
 
+.cart-list {
+	margin: 1rem 0;
+}
+.cart-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 8px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+.cart-item-name {
+	font-weight: 600;
+}
+.cart-item-price {
+	opacity: 0.8;
+}
+.remove-btn {
+	background: none;
+	color: white;
+	width: 28px;
+	height: 28px;
+	cursor: pointer;
+	border: none;
+	font-size: 1.5em;
+}
+.remove-btn:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+.email-form {
+	margin-top: 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+.email-form input {
+	padding: 8px;
+	border-radius: 4px;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	background: transparent;
+	color: white;
+}
+.send-btn {
+	padding: 8px 12px;
+	border-radius: 4px;
+	border: none;
+	background: #b2d236;
+	color: black;
+	cursor: pointer;
+}
+.send-btn:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
 /* =========================
    CLOSE BUTTON
    ========================= */
@@ -157,7 +227,7 @@
 	/* SLIDE-UP CART */
 	.cart-container {
 		position: fixed;
-		width: 100%;
+		width: 80%;
 		height: 70vh;
 		bottom: 0;
 		top: auto;
@@ -186,24 +256,17 @@
 		width: 60px;
 		height: 60px;
 		border-radius: 50%;
-		background: white;
-		color: black;
 		font-size: 1.6rem;
 		border: none;
-		cursor: pointer;
 		z-index: 100;
 	}
 
 	/* CLOSE BUTTON */
 	.cart-close {
-		display: block;
 		position: absolute;
 		top: 15px;
 		right: 15px;
 		background: none;
 		border: none;
-		color: white;
-		font-size: 1.5rem;
-		cursor: pointer;
 	}
 }

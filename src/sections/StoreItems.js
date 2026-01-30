@@ -2,7 +2,7 @@ import React from "react";
 
 import { useLanguage } from "../hooks/useLanguage";
 
-const StoreItems = () => {
+const StoreItems = ({ onAdd }) => {
 	const { language } = useLanguage();
 
 	return (
@@ -85,6 +85,21 @@ const StoreItems = () => {
 							: "Server monitoring, automatic backups, SSL certificates, and regular security patches."}
 					</p>
 					<span>$150 – $500/month</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Alojamiento y Mantenimiento Web"
+										: "Web Hosting & Maintenance",
+								price: "$150 – $500/month",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>{language === "es" ? "SEO y Analítica" : "SEO & Analytics"}</h3>
@@ -94,6 +109,18 @@ const StoreItems = () => {
 							: "Keyword research, on-page optimization, Google Analytics setup, and monthly performance reports."}
 					</p>
 					<span>$1,000 – $2,500/month</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name: language === "es" ? "SEO y Analítica" : "SEO & Analytics",
+								price: "$1,000 – $2,500/month",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>{language === "es" ? "E-commerce" : "E-commerce"}</h3>
@@ -103,6 +130,18 @@ const StoreItems = () => {
 							: "Full online stores with secure payment processing, inventory management, and customer accounts."}
 					</p>
 					<span>$5,000 – $12,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name: language === "es" ? "E-commerce" : "E-commerce",
+								price: "$5,000 – $12,000",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -116,6 +155,21 @@ const StoreItems = () => {
 							: "Custom blog platforms and made with headless content management systems."}
 					</p>
 					<span>$1,000 – $4,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Desarrollo de Blogs y CMS"
+										: "Blog Development & CMS",
+								price: "$1,000 – $4,000",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -129,6 +183,21 @@ const StoreItems = () => {
 							: "Seamless third-party integrations and database connections."}
 					</p>
 					<span>$2,000 – $5,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Servicios de Integración de API"
+										: "API Integration Services",
+								price: "$2,000 – $5,000",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -142,6 +211,21 @@ const StoreItems = () => {
 							: "Recurring billing systems, member-only content areas, subscription management, and automated payment processing."}
 					</p>
 					<span>$2,000 - $7,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Plataformas de Membresía y Suscripción"
+										: "Membership & Subscription Platforms",
+								price: "$2,000 - $7,000",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -155,6 +239,21 @@ const StoreItems = () => {
 							: "Community websites, user profiles, messaging systems, and social networking features."}
 					</p>
 					<span>$3,500 - $15,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Desarrollo de Plataformas Sociales"
+										: "Social Platform Development",
+								price: "$3,500 - $15,000",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 			</div>
 			<div className="design-store-items">
@@ -170,6 +269,21 @@ const StoreItems = () => {
 							: "Logos, colors, typography, and brand guidelines for a consistent visual identity."}
 					</p>
 					<span>$500 – $2,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Identidad de Marca y Diseño de Logotipo"
+										: "Brand Identity & Logo Design",
+								price: "$500 – $2,000",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -183,6 +297,21 @@ const StoreItems = () => {
 							: "Custom posts, stories, and graphics tailored for consistent branding across platforms."}
 					</p>
 					<span>$1,000 – $2,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Diseño y Plantillas para Redes Sociales"
+										: "Social Media Design & Templates",
+								price: "$1,000 – $2,000",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -196,6 +325,21 @@ const StoreItems = () => {
 							: "Business cards, flyers, posters, and other print materials that leave an impression."}
 					</p>
 					<span>$300 – $800</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Diseño Impreso y Materiales de Marketing"
+										: "Print Design & Marketing Materials",
+								price: "$300 – $800",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -209,6 +353,21 @@ const StoreItems = () => {
 							: "User-focused web and app design with wireframes and interactive prototypes."}
 					</p>
 					<span>$500 – $2,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Diseño UI/UX y Prototipado"
+										: "UI/UX Design & Prototyping",
+								price: "$500 – $2,000",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -222,6 +381,21 @@ const StoreItems = () => {
 							: "Packaging, labels, and displays that grab attention and reflect your brand."}
 					</p>
 					<span>$500 – $2,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Diseño de Empaques y Productos"
+										: "Packaging & Product Design",
+								price: "$500 – $2,000",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 				<div className="item">
 					<h3>
@@ -235,6 +409,21 @@ const StoreItems = () => {
 							: "Slide decks, reports, and proposals designed for clarity and visual impact."}
 					</p>
 					<span>$300– $1,000</span>
+					<button
+						className="add-btn"
+						onClick={() =>
+							onAdd &&
+							onAdd({
+								name:
+									language === "es"
+										? "Diseño de Presentaciones y Documentos"
+										: "Presentation & Document Design",
+								price: "$300– $1,000",
+							})
+						}
+					>
+						+
+					</button>
 				</div>
 			</div>
 			<div className="photovideo-store-items">
