@@ -65,7 +65,7 @@ const App = () => {
 		// 2. Start fade out ONLY when video actually finishes
 		setFadeOut(true);
 		// Wait for the CSS transition to finish before unmounting
-		setTimeout(() => setShowIntro(false), 1200);
+		setTimeout(() => setShowIntro(false), 500);
 	};
 
 	return (
