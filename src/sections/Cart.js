@@ -84,9 +84,6 @@ const Cart = ({ isOpen, onClose, cart = [], onRemove }) => {
 						</p>
 					)}
 				</form>
-				<p style={{ fontSize: "12px", marginTop: "8px" }}>
-					Cart is in-memory only — refreshing the page clears it.
-				</p>
 			</div>
 		</div>
 	);
