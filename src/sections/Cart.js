@@ -1,16 +1,27 @@
 import React, { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import "../styles/store.css";
 
 const Cart = ({ isOpen, onClose, cart = [], onRemove }) => {
+	const [state, handleSubmit] = useForm("mzdgyqkg");
 	const [email, setEmail] = useState("");
 
-	const handleSend = () => {
-		if (!email) return;
-		const body = cart.map((i) => `${i.name} — ${i.price}`).join("\n");
-		const mailto = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(
-			"Surco: Cart contents",
-		)}&body=${encodeURIComponent(body)}`;
-		window.location.href = mailto;
+	const onSubmit = async (e) => {
+		e.preventDefault();
+		const cartBody = cart.map((i) => `${i.name} — ${i.price}`).join("\n");
+		const formData = new FormData();
+		formData.append("email", email);
+		formData.append("message", `Cart Contents:\n\n${cartBody}`);
+
+		const result = await fetch("https://formspree.io/f/mzdgyqkg", {
+			method: "POST",
+			body: formData,
+		});
+
+		if (result.ok) {
+			setEmail("");
+			alert("Cart sent successfully!");
+		}
 	};
 
 	return (
@@ -43,20 +54,39 @@ const Cart = ({ isOpen, onClose, cart = [], onRemove }) => {
 			</div>
 
 			<div className="email-form">
-				<label style={{ display: "block", marginBottom: "6px" }}>Email:</label>
-				<input
-					type="email"
-					placeholder="you@example.com"
-					value={email}
-					onChange={(e) => setEmail(e.target.value)}
-				/>
-				<button
-					className="send-btn"
-					onClick={handleSend}
-					disabled={!email || cart.length === 0}
-				>
-					Send Cart
-				</button>
+				<form onSubmit={onSubmit}>
+					<label
+						htmlFor="email"
+						style={{ display: "block", marginBottom: "6px" }}
+					>
+						Email
+					</label>
+					<input
+						id="email"
+						type="email"
+						name="email"
+						placeholder="you@example.com"
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+						required
+					/>
+					<ValidationError prefix="Email" field="email" errors={state.errors} />
+					<button
+						type="submit"
+						className="send-btn"
+						disabled={!email || cart.length === 0 || state.submitting}
+					>
+						{state.submitting ? "Sending..." : "Send Cart"}
+					</button>
+					{state.succeeded && (
+						<p style={{ fontSize: "12px", marginTop: "8px", color: "#b2d236" }}>
+							Cart sent successfully!
+						</p>
+					)}
+				</form>
+				<p style={{ fontSize: "12px", marginTop: "8px" }}>
+					Cart is in-memory only — refreshing the page clears it.
+				</p>
 			</div>
 		</div>
 	);
