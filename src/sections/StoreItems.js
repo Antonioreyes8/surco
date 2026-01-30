@@ -84,7 +84,7 @@ const StoreItems = ({ onAdd }) => {
 							? "Monitoreo de servidores, copias de seguridad automáticas, certificados SSL y actualizaciones de seguridad regulares."
 							: "Server monitoring, automatic backups, SSL certificates, and regular security patches."}
 					</p>
-					<span>$150 – $500/mo</span>
+					<span>$150 – $500 / mo</span>
 					<button
 						className="add-btn"
 						onClick={() =>
@@ -94,7 +94,7 @@ const StoreItems = ({ onAdd }) => {
 									language === "es"
 										? "Alojamiento y Mantenimiento Web"
 										: "Web Hosting & Maintenance",
-								price: "$150 – $500/mo",
+								price: "$150 – $500 / mo",
 							})
 						}
 					>
@@ -108,14 +108,14 @@ const StoreItems = ({ onAdd }) => {
 							? "Investigación de palabras clave, optimización on-page, configuración de Google Analytics e informes mensuales de rendimiento."
 							: "Keyword research, on-page optimization, Google Analytics setup, and monthly performance reports."}
 					</p>
-					<span>$1,000 – $2,500/mo</span>
+					<span>$1,000 – $2,500 / mo</span>
 					<button
 						className="add-btn"
 						onClick={() =>
 							onAdd &&
 							onAdd({
 								name: language === "es" ? "SEO y Analítica" : "SEO & Analytics",
-								price: "$1,000 – $2,500/mo",
+								price: "$1,000 – $2,500 / mo",
 							})
 						}
 					>
@@ -576,7 +576,7 @@ const StoreItems = ({ onAdd }) => {
 							? "Limpieza de imágenes, eliminación de fondos, corrección de color y retoque avanzado."
 							: "Image cleanup, background removal, color correction, and advanced retouching."}
 					</p>
-					<span>$30 - $100/per</span>
+					<span>$30 - $100 / per</span>
 					<button
 						className="add-btn"
 						onClick={() =>
@@ -586,7 +586,7 @@ const StoreItems = ({ onAdd }) => {
 									language === "es"
 										? "Edición y Retoque Fotográfico"
 										: "Photo Editing & Retouching",
-								price: "$30 - $100/per ",
+								price: "$30 - $100 / per ",
 							})
 						}
 					>
