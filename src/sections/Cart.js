@@ -3,33 +3,21 @@ import { useForm, ValidationError } from "@formspree/react";
 import "../styles/store.css";
 
 const Cart = ({ isOpen, onClose, cart = [], onRemove }) => {
-	const [state] = useForm("mzdgyqkg");
+	const [state, handleSubmit] = useForm("mzdgyqkg");
 	const [email, setEmail] = useState("");
 	const [firstandlastName, setFirstandLastName] = useState("");
 	const [company, setCompany] = useState("");
-	const [submitted, setSubmitted] = useState(false);
 
-	const onSubmit = async (e) => {
-		e.preventDefault();
+	const onSubmit = (e) => {
 		const cartBody = cart.map((i) => `${i.name} — ${i.price}`).join("\n");
-		const formData = new FormData();
-		formData.append("email", email);
-		formData.append("firstandlastName", firstandlastName);
-		formData.append("company", company);
-		formData.append("message", `Cart Contents:\n\n${cartBody}`);
+		// Add cart info to form data before submission
+		const messageInput =
+			e.target.elements.message || document.createElement("input");
+		messageInput.name = "message";
+		messageInput.value = `Cart Contents:\n\n${cartBody}`;
 
-		const result = await fetch("https://formspree.io/f/mzdgyqkg", {
-			method: "POST",
-			body: formData,
-		});
-
-		if (result.ok) {
-			setEmail("");
-			setFirstandLastName("");
-			setCompany("");
-			setSubmitted(true);
-			setTimeout(() => setSubmitted(false), 3000);
-		}
+		// Use Formspree's handleSubmit
+		handleSubmit(e);
 	};
 
 	return (
@@ -110,18 +98,27 @@ const Cart = ({ isOpen, onClose, cart = [], onRemove }) => {
 						onChange={(e) => setEmail(e.target.value)}
 						required
 					/>
+					<input
+						type="hidden"
+						name="message"
+						value={`Cart Contents:\n\n${cart.map((i) => `${i.name} — ${i.price}`).join("\n")}`}
+					/>
 					<ValidationError prefix="Email" field="email" errors={state.errors} />
 					<button
 						type="submit"
 						className="send-btn"
 						disabled={
-							!email || !firstandlastName || !company || cart.length === 0
+							!email ||
+							!firstandlastName ||
+							!company ||
+							cart.length === 0 ||
+							state.submitting
 						}
 						style={{ marginTop: "12px" }}
 					>
-						Send Cart
+						{state.submitting ? "Sending..." : "Send Cart"}
 					</button>
-					{submitted && (
+					{state.succeeded && (
 						<p
 							style={{
 								fontSize: "12px",
