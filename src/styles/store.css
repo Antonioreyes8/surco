@@ -1,24 +1,41 @@
+.store-page {
+	color: white;
+	font-family: Delight, sans-serif;
+}
+
+/* =========================
+   CART (DESKTOP DEFAULT)
+   ========================= */
+
 .cart-container {
 	position: fixed;
 	width: 30svw;
 	right: 0;
 	top: 7px;
 	padding: 2rem;
-	/*border: 1px solid white;*/
+	background: black;
+	color: white;
+	z-index: 10;
 }
 
+/* =========================
+   STORE ITEMS
+   ========================= */
+
 .store-items-container {
-	/*border: 1px solid white;*/
 	padding: 2rem;
 	width: 50svw;
 }
 
-.item:hover{
+.item:hover {
 	cursor: pointer;
 	box-shadow: white 0 0 15px;
 }
 
-/* Web store items */
+/* =========================
+   WEB STORE ITEMS
+   ========================= */
+
 .web-store-items .item {
 	background: rgba(255, 255, 255, 0.05);
 	padding: 1rem;
@@ -39,13 +56,16 @@
 	font-size: 1.2em;
 }
 
-/* Design store items */
+/* =========================
+   DESIGN STORE ITEMS
+   ========================= */
+
 .design-store-items .item {
 	background: rgba(255, 255, 255, 0.05);
 	padding: 1rem;
 	margin: 1rem 0;
 	border-radius: 4px;
-	border-left: 3px solid #D34E43;
+	border-left: 3px solid #d34e43;
 }
 
 .design-store-items .item h3 {
@@ -56,17 +76,20 @@
 .design-store-items .item span {
 	display: block;
 	font-weight: 700;
-	color: #D34E43;
+	color: #d34e43;
 	font-size: 1.2em;
 }
 
-/* PhotoVideo store items */
+/* =========================
+   PHOTO / VIDEO STORE ITEMS
+   ========================= */
+
 .photovideo-store-items .item {
 	background: rgba(255, 255, 255, 0.05);
 	padding: 1rem;
 	margin: 1rem 0;
 	border-radius: 4px;
-	border-left: 3px solid #EAF0DF;
+	border-left: 3px solid #eaf0df;
 }
 
 .photovideo-store-items .item h3 {
@@ -77,17 +100,20 @@
 .photovideo-store-items .item span {
 	display: block;
 	font-weight: 700;
-	color: #EAF0DF;
+	color: #eaf0df;
 	font-size: 1.2em;
 }
 
-/* Prints store items */
+/* =========================
+   PRINTS STORE ITEMS
+   ========================= */
+
 .prints-store-items .item {
 	background: rgba(255, 255, 255, 0.05);
 	padding: 1rem;
 	margin: 1rem 0;
 	border-radius: 4px;
-	border-left: 3px solid #4EC1D3;
+	border-left: 3px solid #4ec1d3;
 }
 
 .prints-store-items .item h3 {
@@ -98,7 +124,84 @@
 .prints-store-items .item span {
 	display: block;
 	font-weight: 700;
-	color: #4EC1D3;
+	color: #4ec1d3;
 	font-size: 1.2em;
 }
 
+/* =========================
+   FLOATING CART BUTTON
+   ========================= */
+
+.cart-fab {
+	display: none;
+}
+
+/* =========================
+   CLOSE BUTTON
+   ========================= */
+
+.cart-close {
+	display: none;
+}
+
+/* =========================
+   MOBILE OVERRIDES
+   ========================= */
+
+@media (max-width: 768px) {
+	.store-items-container {
+		width: 100svw;
+	}
+	/* SLIDE-UP CART */
+	.cart-container {
+		position: fixed;
+		width: 100%;
+		height: 70vh;
+		bottom: 0;
+		top: auto;
+		left: 0;
+		right: 0;
+		transform: translateY(100%);
+		transition: transform 0.4s ease;
+		z-index: 50;
+		padding: 2rem;
+		background: black;
+		color: white;
+	}
+
+	.cart-container.open {
+		transform: translateY(0);
+	}
+
+	/* FLOATING CART BUTTON */
+	.cart-fab {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background: white;
+		color: black;
+		font-size: 1.6rem;
+		border: none;
+		cursor: pointer;
+		z-index: 100;
+	}
+
+	/* CLOSE BUTTON */
+	.cart-close {
+		display: block;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		background: none;
+		border: none;
+		color: white;
+		font-size: 1.5rem;
+		cursor: pointer;
+	}
+}

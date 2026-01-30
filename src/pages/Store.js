@@ -1,31 +1,26 @@
-/**
- * @file Store.js
- * @description E-commerce store page
- *
- * PURPOSE:
- * Displays merchandise and products for sale.
- * Supports bilingual content (English and Spanish).
- */
-
-import React from "react";
-import Cart from "../sections/Cart.js";
-import StoreItems from "../sections/StoreItems.js";
+import React, { useState } from "react";
+import Cart from "../sections/Cart";
+import StoreItems from "../sections/StoreItems";
 import "../styles/store.css";
 
-/**
- * Store Page Component
- *
- * @component
- * @returns {React.ReactElement} Store page with product listings
- */
 const Store = () => {
+	const [cartOpen, setCartOpen] = useState(false);
+
+	const toggleCart = () => {
+		setCartOpen((prev) => !prev);
+	};
+
 	return (
-		<div
-			className="store-page"
-			style={{ color: "white", fontFamily: "Delight, sans-serif" }}
-		>
+		<div className="store-page">
 			<StoreItems />
-			<Cart />
+
+			{/* CART */}
+			<Cart isOpen={cartOpen} onClose={() => setCartOpen(false)} />
+
+			{/* MOBILE FAB */}
+			<button className="cart-fab" onClick={toggleCart}>
+				🛒
+			</button>
 		</div>
 	);
 };
