@@ -192,14 +192,15 @@
 	border: 1px solid rgba(255, 255, 255, 0.08);
 	background: transparent;
 	color: white;
+	width: 50%;
 }
 .send-btn {
 	padding: 8px 12px;
 	border-radius: 4px;
 	border: none;
 	background: #b2d236;
-	color: black;
-	cursor: pointer;
+	color: white;
+	width: 50%
 }
 .send-btn:disabled {
 	opacity: 0.5;
