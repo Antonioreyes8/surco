@@ -200,7 +200,8 @@
 	border: none;
 	background: #b2d236;
 	color: white;
-	width: 50%
+	width: 50%;
+	cursor: pointer;
 }
 .send-btn:disabled {
 	opacity: 0.5;
