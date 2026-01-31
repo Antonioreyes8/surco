@@ -786,7 +786,7 @@ const StoreItems = ({ onAdd }) => {
 							})
 						}
 					>
-						+ add to cart
+						+
 					</button>
 				</div>
 			</div>
