@@ -7,7 +7,11 @@ const StoreItems = ({ onAdd }) => {
 
 	return (
 		<div className="store-items-container">
-			<h2>{language === "es" ? "En que servicios esta interesado?" : "What services are you interested in?"}</h2>
+			<h2>
+				{language === "es"
+					? "En que servicios esta interesado?"
+					: "What services are you interested in?"}
+			</h2>
 			<div
 				style={{
 					display: "flex",
@@ -28,7 +32,11 @@ const StoreItems = ({ onAdd }) => {
 							display: "inline-block",
 						}}
 					></span>
-					<span style={{ fontSize: "14px", fontWeight: "500" }}>Website</span>
+					<span style={{ fontSize: "14px", fontWeight: "500" }}>
+						{language === "es"
+							? "Web"
+							: "Web"}
+					</span>
 				</div>
 				{/* Red dot legend for Design items */}
 				<div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
@@ -41,7 +49,11 @@ const StoreItems = ({ onAdd }) => {
 							display: "inline-block",
 						}}
 					></span>
-					<span style={{ fontSize: "14px", fontWeight: "500" }}>Design</span>
+					<span style={{ fontSize: "14px", fontWeight: "500" }}>
+						{language === "es"
+							? "Diseño"
+							: "Design"}
+					</span>
 				</div>
 				{/* White dot legend for Photo/Video items */}
 				<div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
@@ -55,7 +67,9 @@ const StoreItems = ({ onAdd }) => {
 						}}
 					></span>
 					<span style={{ fontSize: "14px", fontWeight: "500" }}>
-						Photo/Video
+						{language === "es"
+							? "Foto/Vídeo"
+							: "Photo/Video"}
 					</span>
 				</div>
 				{/* Blue dot legend for Print items */}
@@ -69,7 +83,11 @@ const StoreItems = ({ onAdd }) => {
 							display: "inline-block",
 						}}
 					></span>
-					<span style={{ fontSize: "14px", fontWeight: "500" }}>Prints</span>
+					<span style={{ fontSize: "14px", fontWeight: "500" }}>
+						{language === "es"
+							? "Impresos"
+							: "Prints"}
+					</span>
 				</div>
 			</div>
 			<div className="web-store-items">
