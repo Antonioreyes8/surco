@@ -57,6 +57,24 @@ const App = () => {
 	}, []);
 
 	/**
+	 * Force video off screen after 15 seconds
+	 * This prevents the video from getting stuck on screen due to slow wifi/loading issues
+	 */
+	useEffect(() => {
+		if (!showIntro || !showVideo) return; // Don't set timeout if video isn't showing
+
+		const timeoutId = setTimeout(() => {
+			if (showIntro) {
+				// Force the video off screen after max time
+				setFadeOut(true);
+				setTimeout(() => setShowIntro(false), 300);
+			}
+		}, 15000); // 15 second max display time
+
+		return () => clearTimeout(timeoutId); // Cleanup timeout on unmount or if video ends early
+	}, [showIntro, showVideo]);
+
+	/**
 	 * Handles video completion
 	 * - Triggers fade-out CSS animation
 	 * - Removes component from DOM after animation finishes (1200ms)
