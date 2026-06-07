@@ -19,6 +19,7 @@ import Home from "./pages/Home";
 import Store from "./pages/Store";
 import Language from "./pages/Language";
 import { LanguageContext } from "./context/LanguageContext";
+import ReactGA from 'react-ga4';
 
 // Import global stylesheets
 import "./styles/global.css";
@@ -39,6 +40,9 @@ import introVideo from "./assets/videos/intro.mp4";
  * @component Main application wrapper
  * @returns {React.ReactElement} Complete app with routing and conditional rendering
  */
+
+ReactGA.initialize('G-C12V7CRZDP');
+
 const App = () => {
 	// Get language from global context (set by Language selection component)
 	const { language } = useContext(LanguageContext);
